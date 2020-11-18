@@ -1,5 +1,4 @@
 #引数に過不足があるとエラーになる
-
 def greeting(country)
   if country == 'japan'
     'こんにちは'
@@ -33,3 +32,44 @@ end
 
 greeting       #=> "こんにちは"
 greeting('us') #=> "hello"
+
+#システム日時や他のメソッドの戻り値をデフォルト値に指定する
+def foo(time = Time.now, message = bar)
+  puts "time: #{time}, message: #{message}"
+end
+
+def bar
+  "BAR"
+end
+
+foo #=> time: ...... + 900, message: BAR
+
+# ?で終わるメソッド(?や!は真偽値を返すメソッド)
+#空文字列であればture、そうでなければfalse
+''.empty?    #=> true
+'abc'.empty? #=> false
+
+#引数の文字列が含まれていればture、そうでなければfalse
+'watch'.include?('at') #=> true
+'watch'.include?('in') #=> false
+
+#奇数ならtrue、偶数ならfalse
+1.odd? #=> true
+2.odd? #=> false
+
+#偶数ならtrue、奇数ならfalse
+1.even? #=> false
+2.even? #=> true
+
+#オブジェクトがnilであればtrue、そうでなければfalse
+nil.nil?   #=> true
+'abc'.nil? #=> false
+1.nil?     #=> false
+
+#3の倍数ならtrue、それ以外はfalseを返す
+def multiple_of_three?(n)
+  n % 3 == 0
+end
+multiple_of_three?(4) #=> false
+multiple_of_three?(5) #=> false
+multiple_of_three?(6) #=> true
