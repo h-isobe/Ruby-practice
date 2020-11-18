@@ -61,3 +61,26 @@ Date.today #=> NameError (uninitialized constant Date)
 require 'date'
 Date.today #=> #<Date: 2020-11-18 ((2459172j,0s,0n),+0s,2299161j)>
 
+
+#putsメソッド、printメソッド、pメソッド
+#puts(改行あり、変数の戻り値やメソッドの戻り値を出力、putsメソッド自身のの戻り値はnil)
+puts 123
+123
+=> nil
+puts 'abc'
+abc
+=> nil
+
+#print(改行なし)
+print 123
+123=> nil
+print 'abc'
+abc=> nil
+
+#p(改行あり、文字列を出力するとダブルクオートで囲まれる。pメソッドも引数で渡されたオブジェクトそのものが戻り値になる)
+p 123
+123
+=> 123
+p 'abc'
+"abc"
+=> "abc"
