@@ -1,4 +1,4 @@
-#デフォルト値付きの引数
+#引数に過不足があるとエラーになる
 
 def greeting(country)
   if country == 'japan'
@@ -20,3 +20,16 @@ greeting('us')
 greeting('us', 'japan')
 #=> ArfumentError...(given 2, expected 1)
 
+
+#デフォルト値付きの引数(デフォルトで引数を設定すると引数なしでもエラーにならない)
+#引数なしの場合はcountryに'japan'を設定する
+def greeting(country = 'japan')
+  if country == 'japan'
+    'こんにちは'
+  else
+    'hello'
+  end  
+end
+
+greeting       #=> "こんにちは"
+greeting('us') #=> "hello"
