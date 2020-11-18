@@ -44,6 +44,7 @@ end
 
 foo #=> time: ...... + 900, message: BAR
 
+
 # ?で終わるメソッド(?や!は真偽値を返すメソッド)
 #空文字列であればture、そうでなければfalse
 ''.empty?    #=> true
@@ -73,3 +74,16 @@ end
 multiple_of_three?(4) #=> false
 multiple_of_three?(5) #=> false
 multiple_of_three?(6) #=> true
+
+
+# !で終わるメソッド(慣習として「使用する際は注意が必要」という意味を持つ)
+a = 'ruby'
+
+#upcaseだと変数aの値は変化しない
+a.upcase #=> "RUBY"
+a        #=> 'ruby'
+
+#upcase!だと変数aの値も大文字に変わる
+#upcase!メソッドのように、呼び出したオブジェクトの状態を変更してしまうメソッドのことを「破壊的メソッド」と呼ぶ
+a.upcase! #=> "RUBY"
+a         #=> "RUBY"
