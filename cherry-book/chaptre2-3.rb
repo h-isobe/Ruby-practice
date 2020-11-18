@@ -30,4 +30,34 @@ c.equal?(b) #=> true
 c.equal?(d) #=> NameError (undefined local variable or method `d' for main:Object) 
 
 
+#同じオブジェクトを参照している場合、オブジェクトの状態が変更されると、変更がそのまま各変数に影響する
+#bとcは同じオブジェクト、aは異なるオブジェクト
+a = 'hello'
+b = 'hello'
+c = b
+
+#渡された文字列を破壊的に大文字に変換するメソッドを定義
+def m!(d)
+  d.upcase!
+end
+#cにm！メソッドを適用する
+m!(c)
+
+#b、cはいずれも大文字になる
+b #=> "HELLO"
+c #=> "HELLO"
+
+#aは別のオブジェクトなので大文字にならない
+a #=> "hello"
+
+
+#require(組込みライブラリでない標準ライブラリやgemは明示的にそのライブラリを読み込む必要がある)
+#require ライブラリ名
+
+#Dateクラスは組込みライブラリではない標準ライブラリなので、そのままでは使用できない
+Date.today #=> NameError (uninitialized constant Date)
+
+#dateライブラリを読み込むとDateクラスが使える
+require 'date'
+Date.today #=> #<Date: 2020-11-18 ((2459172j,0s,0n),+0s,2299161j)>
 
