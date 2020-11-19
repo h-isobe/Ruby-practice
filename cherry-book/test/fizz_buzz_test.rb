@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require '../2章/fizz_buzz'
+require './2章/fizz_buzz'
 
 class FizzBuzzTest < Minitest::Test
   def test_fizz_buzz
