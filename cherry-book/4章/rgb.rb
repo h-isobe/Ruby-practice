@@ -1,3 +1,5 @@
+#例題:RGB変換プログラムを作成
+
 #10進数の数値を16進数に変換した文字列を返すメソッド
 def to_hex(r, g, b)
   [r, g, b].inject('#') do |hex, n|
@@ -14,4 +16,3 @@ def to_ints(hex)
     s.hex
   end
 end
-
