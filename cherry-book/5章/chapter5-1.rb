@@ -1,4 +1,4 @@
-#ハッシュ色々
+#ハッシュについてもっと詳しく
 
 #keys(ハッシュのキーを配列として返す)
 currencies = { japan: 'yen', us: 'dollar', india: 'rupee' }
