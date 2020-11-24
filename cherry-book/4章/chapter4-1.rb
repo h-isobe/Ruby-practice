@@ -56,3 +56,63 @@ a.delete(5) #=> nil
 a           #=> [1, 3, 1, 3]
 
 
+##配列の連結
+
+a = [1]
+b = [2,3]
+a.concat(b) #=> [1, 2, 3]
+# aは連結される(破壊的)
+a #=> [1, 2, 3]
+
+a = [1]
+b = [2,3]
+a + b #=> [1, 2, 3]
+# aもbも変更されない
+a #=> [1]
+b #=> [2, 3]
+
+#破壊的な変更は思いがけない悪影響を与える場合があるため、基本的には+を使う
+
+
+##メソッドの可変長引数(個数に制限のない引数のこと。手前に*をつける)
+def  greeting(*names)
+  "#{names.join('と')}、こんにちは！"
+end
+greeting('田中さん')                         #=> "田中さん、こんにちは！"
+greeting('田中さん', '鈴木さん')             #=> "田中さんと鈴木さん、こんにちは！"
+greeting('田中さん', '鈴木さん', '佐藤さん') #=> "田中さんと鈴木さんと佐藤さん、こんにちは！"
+
+
+##配列に初期値を設定する場合の注意点
+
+#要素が5つで'default'を初期値とする配列を作成する
+a = Array.new(5, 'dafault')
+a #=> ["dafault", "dafault", "dafault", "dafault", "dafault"]
+
+# 1番目の要素を取得する
+str = a[0]
+str #=> 'dafault'
+
+# 1番目の要素を大文字に変換する(破壊的変更)
+str.upcase!
+str #=> "DAFAULT"
+
+# 配列の要素すべてが大文字に変わってしまう
+a #=> ["DAFAULT", "DAFAULT", "DAFAULT", "DAFAULT", "DAFAULT"]
+
+# 上記問題を避けるために引数でなく、ブロックで初期値を渡す
+# ブロックを使って、ブロックの戻り値を初期値とする
+# (ブロック引数には添字が渡されるが、ここでは使わないのでブロック引数を省略)
+a = Array.new(5) {'dafault'}
+a #=> ["dafault", "dafault", "dafault", "dafault", "dafault"]
+
+# 1番目の要素を取得する
+str = a[0]
+str #=> "dafault"
+
+# 1番目の要素を大文字に変換する(破壊的変更)
+str.upcase!
+str #=> "DAFAULT"
+
+# 1番目の要素だけが大文字になり、他は変わらない
+a #=> ["DAFAULT", "dafault", "dafault", "dafault", "dafault"]
