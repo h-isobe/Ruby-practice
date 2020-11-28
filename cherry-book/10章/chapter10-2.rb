@@ -37,3 +37,38 @@ greeting(&repeat_proc)
 #=> おはよう
 #   こんにちはこんにちは
 #   こんばんは
+
+
+## Procオブジェクトを普通の引数として渡す
+
+# ブロックでなく、1個のProcオブジェクトを引数として受け取る(&を付けない)
+def greeting(arrange_proc)
+  puts 'おはよう'
+  text = arrange_proc.call('こんにちは')
+  puts text
+  puts 'こんばんは'
+end
+
+# Procオブジェクトを普通の引数としてgreetingメソッドに渡す(&を付けない)
+repeat_proc = Proc.new{ |text| text * 2 }
+greeting(repeat_proc)
+#=> おはよう
+#   こんにちはこんにちは
+#   こんばんは
+
+
+# 3種類のProcオブジェクトを受け取り、それぞれの挨拶文字に適用するgreetingメソッド
+def greeting(proc_1, proc_2, proc_3)
+  puts proc_1.call('おはよう')
+  puts proc_2.call('こんにちは')
+  puts proc_3.call('こんばんは')
+end
+
+shuffle_proc = Proc.new{ |text| text.chars.shuffle.join }
+repeat_proc = Proc.new{ |text| text * 2 }
+question_proc = Proc.new{ |text| "#{text}?" }
+
+greeting(shuffle_proc, repeat_proc, question_proc)
+#=> はうおよ
+#   こんにちはこんにちは
+#   こんばんは?
