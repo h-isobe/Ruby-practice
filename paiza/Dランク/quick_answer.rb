@@ -65,7 +65,78 @@ puts human_legs
 input_line = gets.to_i
 a = ["#", "."].map { |n| n * 10 }
 input_line.times do
-    puts a
+  puts a
 end
 
+
+#【早解11】縦書き
+side = gets.split("")
+side.each do |vertical|
+    puts vertical
+end
+
+
+#【早解12】山の英語表記
+puts "Mt. " + gets
+
+
+#【早解13】満員電車の乗車率
+passengers = gets.to_f
+capacity = passengers / 140 * 100
+puts capacity.floor.to_s + "%"
+
+
+#【早解14】0から9までのカウンタ
+
+
+#【早解15】気温の変化
+y, t = gets.split.map(&:to_i)
+
+if t - y > 0
+  print "+", t - y
+elsif t - y < 0
+  puts t - y
+else
+  puts t - y
+end
+
+
+#【早解16】アルファベットの穴の数
+a = gets
+zero = ["C", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+one = ["A", "D", "O", "P", "Q", "R"]
+two = ["B"]
+
+if zero.include?(a)
+  puts 0
+elsif one.include?(a)
+  puts 1
+else two.include?(a)
+  puts 2
+end
+
+
+#【早解17】騒音レベル
+l = gets.to_i
+
+if l < 30
+  puts "quiet"
+elsif l < 50
+  puts "normal"
+elsif l < 70
+  puts "noisy"
+else 70 <= l
+  puts "very noisy"
+end
+
+
+#【早解18】TGIF
+weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+a = gets
+if a == "Friday"
+  puts 'TGIF'
+else 
+  puts "Still #{a}"
+end
 
