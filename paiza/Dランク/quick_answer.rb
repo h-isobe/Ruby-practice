@@ -89,6 +89,7 @@ puts capacity.floor.to_s + "%"
 #【早解14】0から9までのカウンタ
 
 
+
 #【早解15】気温の変化
 y, t = gets.split.map(&:to_i)
 
@@ -140,3 +141,19 @@ else
   puts "Still #{a}"
 end
 
+
+#【早解19】可聴領域
+f = gets.to_i
+
+if 20 <= f && f <= 15000
+  puts 'yes'
+elsif 15000 < f && f <= 20000
+  puts 'not sure'
+else 
+  puts 'no'
+end
+
+
+#【早解20】駄菓子の大人買い
+possession_money = gets.to_i
+puts possession_money / 10
