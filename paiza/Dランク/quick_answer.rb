@@ -132,8 +132,6 @@ end
 
 
 #【早解18】TGIF
-weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-
 a = gets
 if a == "Friday"
   puts 'TGIF'
