@@ -1,6 +1,6 @@
 ## メモ用
 
-#【早解2】1日1万歩
+#【早解1】1日1万歩
 d, s = gets.split.map(&:to_i)
 if d * 1000 / s >= 100
   puts "yes"
