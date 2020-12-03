@@ -87,7 +87,9 @@ puts capacity.floor.to_s + "%"
 
 
 #【早解14】0から9までのカウンタ
-
+array = (0..9).to_a
+n = gets.to_i
+puts array.rotate(n)
 
 
 #【早解15】気温の変化
