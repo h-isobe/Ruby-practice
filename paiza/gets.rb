@@ -1,4 +1,39 @@
-###標準出力色々
+### 標準出入力色々
+
+
+## 文字列の取得
+string = gets.chomp
+#string
+puts string
+#=> "string"
+
+
+## 数値の取得
+integer = gets.chomp.to_i
+#123
+puts integer
+#=> 123
+
+
+## 1行の要素を取得
+line = gets.chomp
+#line
+puts line
+#=> "line"
+
+
+## 1行の複数行を取得(文字列の場合)
+line = gets.chomp.split
+#Spring Summer Autumn
+puts line
+#=> ["Spring", "Summer", "Autumn"]
+
+
+## 1行の複数行を取得(数値の場合)
+line = gets.chomp.split.map(&:to_i)
+#1 2 3
+puts line
+#=> [1, 2, 3]
 
 
 ##getsメソッド(1行の入力文字を取得)
@@ -25,7 +60,6 @@ puts input_line
 a = gets.to_i
 input_line = readlines
 puts input_line
-
 
 
 ## gets.splitメソッド
