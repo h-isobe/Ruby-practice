@@ -32,3 +32,33 @@ N = gets.to_i
   end
 
 end
+
+
+## 宝くじ
+
+winning_number = gets.to_s.chomp
+counts = gets.to_i
+
+second_winning_number = winning_number.slice(2..5).to_i
+third_winning_number = winning_number.slice(3..5).to_i
+
+strings = []
+
+counts.times do
+  string = gets.chomp
+  strings << string
+end
+
+strings.each do |st|
+  if  st.chomp.to_i == winning_number.to_i
+    puts 'first'
+  elsif  st.chomp.to_i  == winning_number.to_i + 1 or st.chomp.to_i  == winning_number.to_i - 1
+    puts 'adjacent'
+  elsif  st.chomp.slice(2..5).to_i == second_winning_number
+    puts 'second'
+  elsif  st.chomp.slice(3..5).to_i == third_winning_number
+    puts 'third'
+  else
+    puts 'blank'
+  end
+end
