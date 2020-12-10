@@ -50,3 +50,28 @@ str.insert(5, ",おはよう")
 str.insert(-1, ",こんばんは")
 puts str
 #=> "ありがとう,おはよう,ごめんなさい,すいません,こんばんは"
+
+
+## 9:rubyで文字列反転させる
+str = "プログラミング言語：ruby"
+str.reverse
+#=> "ybur：語言グンミラグロプ"
+
+## 10:rubyの変数について
+case = "ruby,python,php,java"
+p case
+#=> 文法エラーとなる。caseは予約後のため
+
+
+## 11:rubyのsliceメソッドについて
+string = "プログラミング ruby"
+string.slice(0,8)
+#=> "プログラミング " (sliceで0番目から開始して8番目まで取り出している)
+p string
+#=> "プログラミング ruby" (非破壊的メソッドのため)
+
+
+## 12:rubyのgsubメソッド
+string = "東京　大阪 名古屋"
+p string.gsub(/ |　/, ',')
+#=> "東京,大阪,名古屋"
