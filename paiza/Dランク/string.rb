@@ -31,3 +31,18 @@ end
 ## 文字列の文字数
 string = gets.chomp
 puts string.length
+
+
+## 文字の検索
+string = gets.chomp
+char = gets.chomp
+a = string.index(char)
+puts a.to_i + 1
+
+
+## 文字列の連結
+num = gets.to_i
+num.times do
+  string = gets.chomp
+  print string.concat
+end
