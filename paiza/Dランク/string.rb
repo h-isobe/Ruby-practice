@@ -46,3 +46,9 @@ num.times do
   string = gets.chomp
   print string.concat
 end
+
+
+## 部分文字列
+string = gets.chomp
+n, m = gets.split.map(&:to_i)
+puts string[n-1...m]
