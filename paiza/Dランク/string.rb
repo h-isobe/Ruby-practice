@@ -53,3 +53,9 @@ string = gets.chomp
 n, m = gets.split.map(&:to_i)
 puts string[n-1...m]
 
+
+## 文字列の挿入
+n = gets.chomp
+m = gets.chomp
+num = gets.to_i
+puts n.insert(num, m)
