@@ -52,3 +52,4 @@ end
 string = gets.chomp
 n, m = gets.split.map(&:to_i)
 puts string[n-1...m]
+
