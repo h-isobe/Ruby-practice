@@ -59,3 +59,11 @@ n = gets.chomp
 m = gets.chomp
 num = gets.to_i
 puts n.insert(num, m)
+
+
+## 文字列の書き換え
+string = gets.chomp
+n, m = gets.split
+string[n.to_i-1] = m
+puts string
+
