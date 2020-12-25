@@ -67,3 +67,6 @@ n, m = gets.split
 string[n.to_i-1] = m
 puts string
 
+
+## 文字列から数値への変換
+puts num = gets.to_i - 813
