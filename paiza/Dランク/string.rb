@@ -70,3 +70,11 @@ puts string
 
 ## 文字列から数値への変換
 puts num = gets.to_i - 813
+
+
+## 数値から文字列への変換
+a = gets.to_i
+b = gets.to_i
+num = gets.to_i
+sum = (a + b).to_s
+puts sum.slice(num-1)
