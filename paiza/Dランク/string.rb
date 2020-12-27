@@ -78,3 +78,7 @@ b = gets.to_i
 num = gets.to_i
 sum = (a + b).to_s
 puts sum.slice(num-1)
+
+
+## 大文字から小文字への変換
+puts string = gets.chomp.downcase
