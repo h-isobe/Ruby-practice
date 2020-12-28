@@ -82,3 +82,7 @@ puts sum.slice(num-1)
 
 ## 大文字から小文字への変換
 puts string = gets.chomp.downcase
+
+
+## 小文字から大文字への変換
+puts string = gets.chomp.upcase
