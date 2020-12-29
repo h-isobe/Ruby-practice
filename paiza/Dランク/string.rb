@@ -86,3 +86,7 @@ puts string = gets.chomp.downcase
 
 ## 小文字から大文字への変換
 puts string = gets.chomp.upcase
+
+
+## 大文字小文字の反転
+puts string = gets.chomp.swapcase
