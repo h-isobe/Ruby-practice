@@ -86,3 +86,22 @@ puts string = gets.chomp.downcase
 
 ## 小文字から大文字への変換
 puts string = gets.chomp.upcase
+
+
+## 大文字小文字の反転
+puts string = gets.chomp.swapcase
+
+
+## 文字列の検索
+str1 = gets.chomp
+str2 = gets.chomp
+if str1.include?(str2)
+  puts 'YES'
+else
+  puts 'NO'
+end
+
+
+## 文字列の反転
+string = gets.chomp
+puts string.reverse
