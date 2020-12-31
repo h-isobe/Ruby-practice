@@ -100,11 +100,8 @@ if str1.include?(str2)
 else
   puts 'NO'
 end
-<<<<<<< HEAD
 
 
 ## 文字列の反転
 string = gets.chomp
 puts string.reverse
-=======
->>>>>>> e9d0c5f7c72c1b02ab0858a3bfe06ea91d7d9d7c
