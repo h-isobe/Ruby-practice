@@ -105,3 +105,12 @@ end
 ## 文字列の反転
 string = gets.chomp
 puts string.reverse
+
+
+## 回文判定
+string = gets.chomp
+if string.reverse == string
+  puts 'YES'
+else
+  puts 'NO'
+end
