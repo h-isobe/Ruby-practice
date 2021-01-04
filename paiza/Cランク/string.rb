@@ -8,3 +8,7 @@ puts string
 
 ## 日時データの変換その１
 puts string = gets.chomp.gsub('/', '・').gsub(':', '・').split('・')
+
+
+## 日時データの変換その２
+puts string = gets.chomp.gsub('/', ' ').gsub(':', ' ').split(' ')
