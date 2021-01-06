@@ -21,3 +21,8 @@ if s.match(/\A[0-9]+\z/)
 else
   puts "NO"
 end
+
+
+## 重複の削除
+s = gets.chomp.split('')
+puts s.uniq.join
