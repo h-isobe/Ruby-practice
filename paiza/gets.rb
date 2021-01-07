@@ -85,3 +85,18 @@ puts a
 # ccccc
 
 
+## 改行を入れずに値を出力
+print "Hello,Ruby"
+print 100
+
+
+## 型情報（文字列型、数値型など）を入れて出力
+p "Hello, Ruby"
+p 100
+
+
+## 書式を指定して出力
+printf('出力:文字列 %s 数値 %d', "Hello, Ruby", 100)
+#=> 出力:文字列 Hello, Ruby 数値 100
+
+
