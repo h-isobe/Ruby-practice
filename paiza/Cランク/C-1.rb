@@ -62,3 +62,11 @@ strings.each do |st|
     puts 'blank'
   end
 end
+
+
+## 単語のカウント
+string = gets.chomp.split(" ")
+hashs = string.group_by(&:itself).map{ |key, value| [key, value.count] }
+hashs.each do |key, value|
+    puts "#{key} #{value}"
+end
