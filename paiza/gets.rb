@@ -45,6 +45,13 @@ puts input_line
 #a b c
 
 
+## 複数行にわたる入力
+count = gets.to_i
+count.times do
+    puts i = gets.to_i
+end
+
+
 ## readlinesメソッド(複数行の文字列をキーボードから取得)
 input_line = readlines
 #abc
@@ -98,5 +105,6 @@ p 100
 ## 書式を指定して出力
 printf('出力:文字列 %s 数値 %d', "Hello, Ruby", 100)
 #=> 出力:文字列 Hello, Ruby 数値 100
+
 
 
