@@ -45,13 +45,6 @@ puts input_line
 #a b c
 
 
-## 複数行にわたる入力
-count = gets.to_i
-count.times do
-    puts i = gets.to_i
-end
-
-
 ## readlinesメソッド(複数行の文字列をキーボードから取得)
 input_line = readlines
 #abc
