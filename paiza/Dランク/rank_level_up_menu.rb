@@ -21,6 +21,10 @@ count.times do
 end
 
 
+## STEP: 4 入力の配列による保持
+
+
+
 ## STEP: 5 半角スペース区切りでの出力
 i = gets.to_i
 array = ["paiza"] * i
@@ -32,4 +36,14 @@ count = gets.chomp.to_i
 string = gets.split
 string.each do |str|
     puts str
+end
+
+
+## FINAL問題 標準入出力
+count = gets.chomp.to_i
+i = 0
+while i < count
+  a, b = gets.split.map(&:chomp)
+  puts "#{a} #{b.to_i + 1}"
+  i += 1
 end
