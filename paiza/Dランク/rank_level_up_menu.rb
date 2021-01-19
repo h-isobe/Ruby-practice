@@ -47,3 +47,13 @@ while i < count
   puts "#{a} #{b.to_i + 1}"
   i += 1
 end
+
+
+## STEP: 8 整数と文字列
+c = gets.chomp.to_i
+i = 0
+while i < c
+  s = gets.chomp
+  puts s.length
+  i += 1
+end
