@@ -57,3 +57,13 @@ while i < c
   puts s.length
   i += 1
 end
+
+
+## STEP: 2 部分文字列
+a = gets.chomp
+s = gets.chomp
+if s.include?(a)
+  puts "YES"
+else
+  puts "NO"
+end
