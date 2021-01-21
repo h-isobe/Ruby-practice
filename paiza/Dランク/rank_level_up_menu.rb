@@ -49,7 +49,7 @@ while i < count
 end
 
 
-## STEP: 8 整数と文字列
+## STEP: 1 整数と文字列
 c = gets.chomp.to_i
 i = 0
 while i < c
@@ -67,3 +67,10 @@ if s.include?(a)
 else
   puts "NO"
 end
+
+
+## STEP: 3 数字の文字列操作
+s = gets.chomp.split("")
+a = s[0].to_i + s[3].to_i
+b = s[1].to_i + s[2].to_i
+puts a.to_s + b.to_s
