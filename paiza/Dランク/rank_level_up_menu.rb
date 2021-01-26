@@ -74,3 +74,9 @@ s = gets.chomp.split("")
 a = s[0].to_i + s[3].to_i
 b = s[1].to_i + s[2].to_i
 puts a.to_s + b.to_s
+
+
+##STEP: 4 数字の文字列操作（0埋め）
+n = gets.chomp
+puts format("%03d", n)
+
