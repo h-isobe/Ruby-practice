@@ -1,13 +1,13 @@
 puts "ジャンケンゲーム"
 puts "---------------------------"
 puts "0:グー, 1:チョキ, 2:パー から選択してください"
-array = ["グー", "チョキ", "パー"]
+choice = ["グー", "チョキ", "パー"]
 
 user_hand = gets.chomp.to_i
-puts "あなたは" + array[user_hand] + "を出しました。"
+puts "あなたは" + choice[user_hand] + "を出しました。"
 
 cp_hand = rand(0..2)
-puts "相手は" + array[cp_hand] + "を出しました。"
+puts "相手は" + choice[cp_hand] + "を出しました。"
 
 def geme(user_hand, cp_hand)
   if user_hand == 0 && cp_hand == 1
