@@ -1,6 +1,7 @@
 ### Cランクレベルアップメニュー
 
 
+### 標準入出力
 ## STEP: 1 単純な入出力
 string = gets
 puts string
@@ -49,6 +50,8 @@ while i < count
 end
 
 
+
+### 文字列
 ## STEP: 1 整数と文字列
 c = gets.chomp.to_i
 i = 0
@@ -84,4 +87,17 @@ puts format("%03d", n)
 ## STEP: 5 数字の文字列操作（時刻1）
 s = gets.chomp.split(":")
 puts s.map(&:to_i)
+
+
+## STEP: 6 数字の文字列操作（時刻2）
+
+
+
+### forループ
+## STEP: 1 3の倍数のカウント
+count = gets.chomp.to_i
+a = gets.split.map(&:to_i)
+b = a.map{ |n| n % 3 == 0 }
+puts b.count(true)
+
 
