@@ -101,3 +101,16 @@ b = a.map{ |n| n % 3 == 0 }
 puts b.count(true)
 
 
+## STEP: 2 フラグ管理
+n = gets.chomp.to_i
+a = readlines.map &:to_i
+if a.include?(7)
+  puts "YES"
+else
+  puts "NO"
+end
+
+
+
+
+
